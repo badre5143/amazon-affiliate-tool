@@ -1,95 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Affiliate Generator - SocialMediaFreeTools.com</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        .container {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header class="tool-header">
-            <h1>🚀 Amazon Affiliate Link Generator</h1>
-            <p class="subtitle">Optimized for Social Media Platforms</p>
-            <div class="brand">by SocialMediaFreeTools.com</div>
-        </header>
-
-        <div class="platform-selector">
-            <div class="platform-buttons">
-                <button class="platform-btn active" data-platform="all">🌐 All Platforms</button>
-                <button class="platform-btn" data-platform="instagram">📷 Instagram</button>
-                <button class="platform-btn" data-platform="youtube">📺 YouTube</button>
-                <button class="platform-btn" data-platform="twitter">🐦 Twitter</button>
-                <button class="platform-btn" data-platform="tiktok">🎵 TikTok</button>
-            </div>
-        </div>
-
-        <div class="input-section">
-            <div class="input-group">
-                <label for="amazonUrl">🔗 Amazon Product URL</label>
-                <input type="url" id="amazonUrl" placeholder="https://amazon.com/dp/PRODUCT_ID" required>
-            </div>
-            
-            <div class="input-group">
-                <label for="trackingId">🏷️ Your Tracking ID</label>
-                <input type="text" id="trackingId" placeholder="yourname-21" required>
-                <small>Get this from Amazon Associates dashboard</small>
-            </div>
-
-            <div class="input-group">
-                <label for="productName">📦 Product Name (Optional)</label>
-                <input type="text" id="productName" placeholder="e.g., Wireless Earbuds">
-            </div>
-
-            <button id="generateBtn" class="generate-btn">🎯 Generate Affiliate Links</button>
-        </div>
-
-        <div class="results-section" id="results" style="display: none;">
-            <h3>✨ Your Generated Links</h3>
-            <div class="platform-results" id="platformResults">
-                <!-- Results will be dynamically inserted here -->
-            </div>
-        </div>
-
-        <div class="features-section">
-            <h3>💡 Why Use Our Tool?</h3>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h4>🔒 Secure</h4>
-                    <p>No data stored, complete privacy</p>
-                </div>
-                <div class="feature-card">
-                    <h4>⚡ Fast</h4>
-                    <p>Instant link generation</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🎯 Optimized</h4>
-                    <p>Platform-specific formatting</p>
-                </div>
-                <div class="feature-card">
-                    <h4>💯 Free</h4>
-                    <p>No hidden costs</p>
-                </div>
-            </div>
-        </div>
+<div class="input-section">
+    <div class="input-group">
+        <label for="amazonUrl">🔗 Amazon Product URL</label>
+        <input type="url" id="amazonUrl" placeholder="https://amazon.com/dp/PRODUCT_ID" required>
+    </div>
+    
+    <div class="input-group">
+        <label for="trackingId">🏷️ Your Tracking ID</label>
+        <input type="text" id="trackingId" placeholder="yourname-21" required>
+        <small>Get this from Amazon Associates dashboard</small>
     </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <div class="input-group">
+        <label for="productName">📦 Product Name (Optional)</label>
+        <input type="text" id="productName" placeholder="e.g., Wireless Earbuds">
+    </div>
+
+    <button id="generateBtn" class="generate-btn">🎯 Generate Affiliate Links</button>
+    
+    <!-- YEH NAYA BUTTON ADD KARO -->
+    <button id="resetBtn" class="reset-btn" onclick="resetTool()" style="display: none;">🔄 Create New Link</button>
+</div>
