@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const platformButtons = document.querySelectorAll('.platform-btn');
     const generateBtn = document.getElementById('generateBtn');
+    const resetBtn = document.getElementById('resetBtn');
     const resultsSection = document.getElementById('results');
     const platformResults = document.getElementById('platformResults');
 
@@ -37,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
             : [selectedPlatform];
 
         displayResults(platforms, affiliateLink, productName);
+        
+        // RESET BUTTON SHOW KARO
+        resetBtn.style.display = 'block';
     }
 
     function generateAffiliateLink(url, trackingId) {
@@ -135,6 +139,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// RESET FUNCTION
+function resetTool() {
+    // Clear input fields
+    document.getElementById('amazonUrl').value = '';
+    document.getElementById('trackingId').value = '';
+    document.getElementById('productName').value = '';
+    
+    // Hide results section
+    document.getElementById('results').style.display = 'none';
+    
+    // Hide reset button
+    document.getElementById('resetBtn').style.display = 'none';
+    
+    // Reset platform selection
+    document.querySelectorAll('.platform-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector('[data-platform="all"]').classList.add('active');
+    
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Copy to Clipboard Function
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
         alert('Copied to clipboard! ✅');
