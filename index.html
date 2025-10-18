@@ -1,22 +1,35 @@
-<div class="input-section">
-    <div class="input-group">
-        <label for="amazonUrl">🔗 Amazon Product URL</label>
-        <input type="url" id="amazonUrl" placeholder="https://amazon.com/dp/PRODUCT_ID" required>
-    </div>
+<div class="amazon-tool-container">
+    <h2>🚀 Amazon Affiliate Link Generator</h2>
+    <p>Create optimized Amazon affiliate links for all social media platforms - Instagram, YouTube, Twitter, TikTok</p>
     
-    <div class="input-group">
-        <label for="trackingId">🏷️ Your Tracking ID</label>
-        <input type="text" id="trackingId" placeholder="yourname-21" required>
-        <small>Get this from Amazon Associates dashboard</small>
+    <div class="tool-iframe-wrapper">
+        <iframe 
+            src="https://YOUR_USERNAME.github.io/amazon-affiliate-tool" 
+            width="100%" 
+            height="800px"
+            frameborder="0"
+            scrolling="no"
+            style="border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 2px solid #e0e0e0;"
+            onload="resizeIframe(this)">
+        </iframe>
     </div>
-
-    <div class="input-group">
-        <label for="productName">📦 Product Name (Optional)</label>
-        <input type="text" id="productName" placeholder="e.g., Wireless Earbuds">
-    </div>
-
-    <button id="generateBtn" class="generate-btn">🎯 Generate Affiliate Links</button>
-    
-    <!-- YEH NAYA BUTTON ADD KARO -->
-    <button id="resetBtn" class="reset-btn" onclick="resetTool()" style="display: none;">🔄 Create New Link</button>
 </div>
+
+<style>
+.amazon-tool-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.tool-iframe-wrapper {
+    margin: 20px 0;
+}
+</style>
+
+<script>
+function resizeIframe(obj) {
+    setTimeout(() => {
+        obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+    }, 1000);
+}
+</script>
